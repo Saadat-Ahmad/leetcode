@@ -1,6 +1,6 @@
 class Solution {
 public:
-    void rotate(vector<int>& nums, int k) {
+    void rotate(vector<int>& nums, int& k) {
         int s = nums.size();
         k = k % s; 
         vector<int> buf (nums.begin(), nums.begin() + s - k);
