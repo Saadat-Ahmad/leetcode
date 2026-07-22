@@ -1,9 +1,8 @@
 class Solution {
 public:
-    int minSubArrayLen(int target, vector<int>& nums) {
+    int minSubArrayLen(int& target, vector<int>& nums) {
         int l = 0, r = 0;
         int curSum = 0, ans = INT_MAX;
-        unordered_set<string> st;
         while(r < nums.size()) {
             curSum += nums[r];
             r++;
