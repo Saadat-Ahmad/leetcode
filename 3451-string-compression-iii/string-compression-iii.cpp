@@ -1,6 +1,6 @@
 class Solution {
 public:
-    string compressedString(string word) {
+    string compressedString(string& word) {
         int i = 0;
         char c = word[0];
         string res = "";
