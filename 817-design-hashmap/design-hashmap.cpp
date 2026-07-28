@@ -34,7 +34,10 @@ public:
     void remove(int key) {
         LNode* n = arr[key%1000];
         while(n != nullptr){
-            if(n->key == key) n->key = -99;
+            if(n->key == key) {
+                n->key = -1;
+                
+            }
             n = n->next;
         }
     }
