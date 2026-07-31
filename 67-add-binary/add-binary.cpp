@@ -1,6 +1,6 @@
 class Solution {
 public:
-    string addBinary(string a, string b) {
+    string addBinary(string& a, string& b) {
         int i = 0, j =0;
         reverse(a.begin(), a.end());
         reverse(b.begin(), b.end());
