@@ -1,19 +1,17 @@
 class StockSpanner {
 public:
-    vector<int> arr;
+    stack<pair<int, int>> stk;  //{span, price}
+    StockSpanner() {}
     
-    StockSpanner() {
-        arr.push_back(INT_MAX);
-    }
     int next(int price) {
-        arr.push_back(price);
-        int s = arr.size()-1;
-        int res = 0;
-        for(const auto& it : arr | views::reverse) {
-            if(it > price) break;
-            else res++;
+        int span = 1;
+        while(!stk.empty() && stk.top().second <= price){
+            span += stk.top().first;
+            stk.pop();
         }
-        return res;
+        stk.push({span, price});
+        return span;
+        
     }
 };
 
