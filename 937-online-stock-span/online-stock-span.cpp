@@ -9,7 +9,7 @@ public:
         arr.push_back(price);
         int s = arr.size()-1;
         int res = 0;
-        while(s > 0 && arr[s] <= price) {res++; s--;}
+        while(arr[s] <= price) {res++; s--;}
         return res;
     }
 };
