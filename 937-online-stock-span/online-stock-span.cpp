@@ -9,7 +9,10 @@ public:
         arr.push_back(price);
         int s = arr.size()-1;
         int res = 0;
-        while(arr[s] <= price) {res++; s--;}
+        for(const auto& it : arr | views::reverse) {
+            if(it > price) break;
+            else res++;
+        }
         return res;
     }
 };
