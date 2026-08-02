@@ -1,10 +1,9 @@
 class Solution {
 public:
-    string simplifyPath(string path) {
+    string simplifyPath(string& path) {
         stack<string> stk;
         string tmp;
         string ans = "";
-        int pop = 0;
         path += "/";
         for(const auto& it : path){
             if(it == '/') {
