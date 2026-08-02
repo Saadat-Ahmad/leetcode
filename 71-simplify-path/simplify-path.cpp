@@ -17,10 +17,8 @@ public:
                 tmp += it;
             }
         }
-        while(!stk.empty()){
-            tmp = stk.back();
-            ans = "/" + tmp + ans;
-            stk.pop_back();
+        for(const auto& it : stk){
+            ans += "/" + it;
         }
         if (ans.size() == 0) ans = "/";
         return ans;
