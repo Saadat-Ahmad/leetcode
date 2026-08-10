@@ -1,7 +1,7 @@
 class Solution {
 private:
     double powerFun(double x, int64_t n){
-        double i = 1;
+        int64_t i = 1;
         double res = x;
         while(2*i <= n){
             res *= res;
