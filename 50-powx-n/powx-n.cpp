@@ -1,15 +1,12 @@
 class Solution {
 private:
     double powerFun(double x, int64_t n){
-        int64_t i = 1;
-        double res = x;
-        while(2*i <= n){
-            res *= res;
-            i *= 2;
-        }
-        while(i < n){
-            res *= x;
-            i++;
+        int64_t i = 0;
+        double res = 1;
+        while(n > 0){
+            if(n%2 == 1) res *= x;
+            x *= x;
+            n /= 2;
         }
         return res;
     }
