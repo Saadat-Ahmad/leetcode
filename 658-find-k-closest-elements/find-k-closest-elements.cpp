@@ -1,6 +1,6 @@
 class Solution {
 public:
-    vector<int> findClosestElements(vector<int>& arr, int k, int x) {
+    vector<int> findClosestElements(vector<int>& arr, int& k, int& x) {
         pair<int, int> pr; //diff, val
         vector<pair<int, int>> ar;
         vector<int> res;
